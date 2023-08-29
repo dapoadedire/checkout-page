@@ -18,3 +18,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+
+function restrictInputLength(inputElement) {
+    if (inputElement.value.length > inputElement.maxLength) {
+      inputElement.value = inputElement.value.slice(0, inputElement.maxLength);
+    }
+  }
+  

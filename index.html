@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <div class="card-number">
+          <label for="card-number">Card Number</label>
+          <input
+            type="number"
+            id="card-number-one"
+            class="card-number-input card-number-input-one"
+            name="card-number-input-one"
+            minlength="4"
+            maxlength="4"
+            
+            required
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+            />
+
+          <input
+            type="number"
+            id="card-number-two"
+            class="card-number-input card-number-input-two"
+            name="card-number-input-two"
+            maxlength="4"
+            required
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           
+          />
+          <input
+            type="number"
+            id="card-number-three"
+            class="card-number-input card-number-input-three"
+            name="card-number-input-three"
+            maxlength="4"
+            required
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           
+          />
+
+          <input
+            type="number"
+            id="card-number-four"
+            class="card-number-input card-number-input-four"
+            name="card-number-input-four"
+            maxlength="4"
+            required
+            oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+           
+            />
+        </div>
+
+        <div class="card-holder">
+          <label for="card-holder">Card Holder</label>
+          <input
+            type="text"
+            id="card-holder"
+            class="card-holder-input"
+            name="card-holder-input"
+            required
+          />
+        </div>
+        <div class="expiration-date">
+          <label for="expiration-date">Expiration Date</label>
+          <input type="number" id="month" min="8" max="12" />
+          <input type="number" id="year" min="2023" max="2030" />
+        </div>
+        <div class="cvv">
+          <label for="cvv">CVV</label>
+          <input
+            type="number"
+            id="cvv"
+            class="cvv-input"
+            name="cvv-input"
+            maxlength="3"
+            required
+          />
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

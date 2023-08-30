@@ -116,3 +116,38 @@ button {
   gap: 15px;
   justify-content: space-between;
 }
+
+
+.submit-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 100%, 0.8);
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #62959c;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #408b94;
+}
+
+.show{
+  display: flex;
+}

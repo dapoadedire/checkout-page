@@ -52,7 +52,7 @@ main {
 }
 
 .checkout-page {
-  width: 520px;
+  max-width: 520px;
   border-radius: 10px;
   padding: 30px;
   
@@ -95,6 +95,7 @@ label {
 .expiration-date-input,
 .ccv-input {
   width: 93px;
+
 }
 
 button {

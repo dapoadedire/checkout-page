@@ -10,32 +10,58 @@
     <main>
       <form action="" class="checkout-page">
         <div class="card">
-          <div>
+          <div
+          class="card-chip-type"
+          >
             <div class="card-chip">
-                <img src="https://i.imgur.com/5hYvGJZ.png" alt="card-chip" />
+              <img src="assets/chip.png" alt="chip" />
             </div>
 
             <div class="card-type">
-                
+              <!-- <img src="assets/visa.svg" alt="visa" /> -->
+              <img
+              class="card-type-img"
+              src="assets/mastercard.svg" alt="card-type" />
+              <!-- <img src="assets/amex.svg" alt="amex" /> -->
+              
+            </div>
+           
+          </div>
+
+          <div
+          class="card-holder-expiration-date"
+          >
+            <div>
+              <h3>
+                CARD HOLDER
+              </h3>
+              <p class="card-holder-display">
+                Idan Levi
+              </p>
+
+            </div>
+            <div>
+              <h3>
+                EXPIRES
+              </h3>
+              <p class="expiration-date-display">
+                00/00
+              </p>
             </div>
           </div>
-
-          <div>
-            
-          </div>
-
-
         </div>
         <div class="card-number">
           <label for="card-number">Card Number</label>
           <div class="card-number-input-fields">
             <input
               type="number"
+              
               id="card-number-one"
               class="card-number-input card-number-input-one"
               name="card-number-input-one"
               minlength="4"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -46,6 +72,7 @@
               class="card-number-input card-number-input-two"
               name="card-number-input-two"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -55,6 +82,7 @@
               class="card-number-input card-number-input-three"
               name="card-number-input-three"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -65,10 +93,14 @@
               class="card-number-input card-number-input-four"
               name="card-number-input-four"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
           </div>
+          <p class="error card-number-error">
+            Please enter a valid card number
+          </p>
         </div>
 
         <div class="card-holder">
@@ -79,55 +111,72 @@
               id="card-holder"
               class="card-holder-input"
               name="card-holder-input"
+              placeholder="Idan Levi" 
               required
-              oninput="restrictInputLength(this)"
+              
             />
           </div>
+          <p class="error card-holder-error">
+            Please enter a valid card holder name
+          </p>
+          
         </div>
-       <div class="expiration-date-ccv">
-        <div class="expiration-date">
+        <div class="expiration-date-ccv">
+          <div class="expiration-date">
             <label for="expiration-date">Expiration Date</label>
             <div class="expiration-date-input-field">
-              <input
-                type="number"
+              <select
                 id="month"
                 class="expiration-date-input expiration-date-input-month"
                 name="expiration-date-input-month"
-                min="8"
-                max="12"
-                oninput="restrictInputLength(this)"
-              />
-              <input
-                type="number"
+                required
+              >
+                <option value="" disabled selected>--</option>
+              </select>
+              <select
                 id="year"
                 class="expiration-date-input expiration-date-input-year"
                 name="expiration-date-input-year"
-                min="2023"
-                max="2030"
-                oninput="restrictInputLength(this)"
-              />
+                required
+              >
+                <option value="" disabled selected>--</option>
+              </select>
             </div>
+
+           
+            
           </div>
           <div class="ccv">
             <label for="ccv">CcV</label>
             <div class="ccv-input-field">
               <input
-                type="number"
+                type="password"
                 id="ccv"
                 class="ccv-input"
                 name="ccv-input"
                 maxlength="3"
                 required
+                placeholder="123"
                 oninput="restrictInputLength(this)"
               />
             </div>
+           
           </div>
-       </div>
+        </div>
 
         <div class="submit-button">
           <button type="submit">SUBMIT</button>
         </div>
       </form>
+      <div class="submit-message">
+        
+        <div class="message">
+          <img src="assets/payment-successful.png" alt="">
+          <p>
+            Idan, your payment was successful.
+          </p>
+        </div>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>

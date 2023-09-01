@@ -12,7 +12,6 @@
         <div class="card">
           <div>
             <div class="card-chip">
-              <img src="https://i.imgur.com/5hYvGJZ.png" alt="card-chip" />
             </div>
 
             <p class="card-type"></p>
@@ -32,6 +31,7 @@
               name="card-number-input-one"
               minlength="4"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -42,6 +42,7 @@
               class="card-number-input card-number-input-two"
               name="card-number-input-two"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -51,6 +52,7 @@
               class="card-number-input card-number-input-three"
               name="card-number-input-three"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -61,6 +63,7 @@
               class="card-number-input card-number-input-four"
               name="card-number-input-four"
               maxlength="4"
+              placeholder="0000"
               required
               oninput="restrictInputLength(this)"
             />
@@ -75,8 +78,9 @@
               id="card-holder"
               class="card-holder-input"
               name="card-holder-input"
+              placeholder="Idan Levi" 
               required
-              oninput="restrictInputLength(this)"
+              
             />
           </div>
         </div>
@@ -107,12 +111,13 @@
             <label for="ccv">CcV</label>
             <div class="ccv-input-field">
               <input
-                type="number"
+                type="password"
                 id="ccv"
                 class="ccv-input"
                 name="ccv-input"
                 maxlength="3"
                 required
+                placeholder="123"
                 oninput="restrictInputLength(this)"
               />
             </div>

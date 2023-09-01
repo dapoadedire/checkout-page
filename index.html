@@ -10,22 +10,52 @@
     <main>
       <form action="" class="checkout-page">
         <div class="card">
-          <div>
+          <div
+          class="card-chip-type"
+          >
             <div class="card-chip">
+              <img src="assets/chip.png" alt="chip" />
             </div>
 
-            <p class="card-type"></p>
-            <p class="card-holder-display"></p>
-            <p class="expiration-date-display"></p>
+            <div class="card-type">
+              <!-- <img src="assets/visa.svg" alt="visa" /> -->
+              <img
+              class="card-type-img"
+              src="assets/mastercard.svg" alt="card-type" />
+              <!-- <img src="assets/amex.svg" alt="amex" /> -->
+              
+            </div>
+           
           </div>
 
-          <div></div>
+          <div
+          class="card-holder-expiration-date"
+          >
+            <div>
+              <h3>
+                CARD HOLDER
+              </h3>
+              <p class="card-holder-display">
+                Idan Levi
+              </p>
+
+            </div>
+            <div>
+              <h3>
+                EXPIRES
+              </h3>
+              <p class="expiration-date-display">
+                00/00
+              </p>
+            </div>
+          </div>
         </div>
         <div class="card-number">
           <label for="card-number">Card Number</label>
           <div class="card-number-input-fields">
             <input
               type="number"
+              
               id="card-number-one"
               class="card-number-input card-number-input-one"
               name="card-number-input-one"
@@ -68,6 +98,9 @@
               oninput="restrictInputLength(this)"
             />
           </div>
+          <p class="error card-number-error">
+            Please enter a valid card number
+          </p>
         </div>
 
         <div class="card-holder">
@@ -83,6 +116,10 @@
               
             />
           </div>
+          <p class="error card-holder-error">
+            Please enter a valid card holder name
+          </p>
+          
         </div>
         <div class="expiration-date-ccv">
           <div class="expiration-date">
@@ -105,6 +142,8 @@
                 <option value="" disabled selected>--</option>
               </select>
             </div>
+
+           
             
           </div>
           <div class="ccv">
@@ -121,6 +160,7 @@
                 oninput="restrictInputLength(this)"
               />
             </div>
+           
           </div>
         </div>
 

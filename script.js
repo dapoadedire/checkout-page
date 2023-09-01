@@ -10,6 +10,7 @@ const submitMessage = document.querySelector(".submit-message");
 const cardTypeImage = document.querySelector(".card-type-img");
 const cardNumberError = document.querySelector(".card-number-error");
 const cardHolderError = document.querySelector(".card-holder-error");
+const cvv = document.querySelector(".cvv-input");
 
 function detectCardType(cardNumber) {
   cardNumber = cardNumber.replace(/\s/g, ''); // Remove spaces and non-numeric characters
@@ -53,7 +54,12 @@ cardHolderInput.addEventListener("input", function () {
 
   const cardHolderValue = cardHolderInput.value;
   const cardHolderWords = cardHolderValue.split(" ");
-  if (cardHolderWords.length >= 2) {
+  console.log(cardHolderWords);
+
+  // Check if any of the words are empty
+  const isEmptyWord = cardHolderWords.some(word => word.trim() === "");
+
+  if (cardHolderWords.length >= 2 && !isEmptyWord) {
     cardHolderError.style.display = "none";
     cardHolderInput.style.border = "1px solid hsl(246, 25%, 77%)";
   } else {
@@ -61,6 +67,7 @@ cardHolderInput.addEventListener("input", function () {
     cardHolderInput.style.border = "1px solid hsl(0, 100%, 69%)";
   }
 });
+
 
 const currentYear = new Date().getFullYear();
 
@@ -100,3 +107,27 @@ function restrictInputLength(inputElement) {
     inputElement.value = inputElement.value.slice(0, inputElement.maxLength);
   }
 }
+
+
+
+// submit button
+
+submitButton.addEventListener("click", function (event) {
+  event.preventDefault();
+  submitMessage.style.display = "flex";
+  setTimeout(function () {
+    submitMessage.style.display = "none";
+  }, 5000);
+}
+);
+
+// the submit button should only be active when all the fields are filled out correctly
+
+
+
+
+
+
+
+
+

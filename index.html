@@ -8,7 +8,7 @@
   </head>
   <body>
     <main>
-      <form action="" class="checkout-page">
+      <form action="" class="form checkout-page">
         <div class="card">
           <div
           class="card-chip-type"
@@ -50,7 +50,7 @@
             </div>
           </div>
         </div>
-        <div class="card-number">
+        <div class="card-number input-control">
           <label for="card-number">Card Number</label>
           <div class="card-number-input-fields">
             <input
@@ -103,7 +103,7 @@
           </p>
         </div>
 
-        <div class="card-holder">
+        <div class="input-control card-holder">
           <label for="card-holder">Card Holder</label>
           <div class="card-holder-input-field">
             <input
@@ -121,7 +121,7 @@
           </p>
           
         </div>
-        <div class="expiration-date-ccv">
+        <div class=" input-control expiration-date-ccv">
           <div class="expiration-date">
             <label for="expiration-date">Expiration Date</label>
             <div class="expiration-date-input-field">
@@ -143,10 +143,13 @@
               </select>
             </div>
 
+            <p class="error expiration-date-error">
+              Please enter a valid expiration date
+            </p>
            
             
           </div>
-          <div class="ccv">
+          <div class="input-control ccv">
             <label for="ccv">CcV</label>
             <div class="ccv-input-field">
               <input
@@ -160,6 +163,9 @@
                 oninput="restrictInputLength(this)"
               />
             </div>
+            <p class="error ccv-error">
+              Please enter a valid ccv
+            </p>
            
           </div>
         </div>
